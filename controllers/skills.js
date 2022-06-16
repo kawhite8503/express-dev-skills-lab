@@ -1,7 +1,9 @@
 import { Skills } from "../data/skill-data.js"
 
 function index(req, res) {
-  res.render('/skills')
+  res.render('skills/index', {
+    Skills
+  })
 }
 
 export {

@@ -8,13 +8,13 @@
   <title>Skills</title>
 </head>
 <body>
-  <h1>Kathy's skills</h1>
+  <h1>Skills</h1>
   <ul>
-    <% todos.forEach(todo => { %>
+    <% Skills.forEach(skill => { %>
       <li>
-				<%= todo.text %> 
+				<%= skill.text %> 
 				- 
-				<%= todo.done ? 'done' : 'not done' %>
+				<%= skill.qualified ? 'qualified' : 'not qualified' %>
 			</li>
     <% }) %>
   </ul>
