@@ -28,7 +28,23 @@ function create(req,res){
   })
 }
 
+function show(req,res){
+  Skill.findById(req.params.id)
+  .then(skill =>{
+    res.render('skills/show', {
+      skill: skill ///might need to be uppercase
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/')
+  })
+}
+
+
 export {
   index
-  newSkill as new
+  newSkill as new,
+  create,
+  show
 }

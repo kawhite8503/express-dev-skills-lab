@@ -12,7 +12,7 @@
   <ul>
     <% Skills.forEach(skill => { %>
       <li>
-				<%= skill.text %> 
+				<a href="/skills/<%= skill._id %> "><%= skill.text %></a> 
 				- 
 				<%= skill.qualified ? 'qualified' : 'not qualified' %>
 			</li>
