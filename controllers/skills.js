@@ -4,7 +4,8 @@ function index(req, res) {
   Skill.find({})
   .then(skills => {
     res.render('skills/index', {
-      Skills: Skills
+      skills: skills,
+      time: req.time
       })
   })
   .catch(error => {
@@ -43,7 +44,7 @@ function show(req,res){
 
 
 export {
-  index
+  index,
   newSkill as new,
   create,
   show

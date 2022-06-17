@@ -8,9 +8,9 @@
   <title>Skills</title>
 </head>
 <body>
-  <h1>Skills</h1>
+  <h1>Skills as of <%= time %> </h1>
   <ul>
-    <% Skills.forEach(skill => { %>
+    <% skills.forEach(skill => { %>
       <li>
 				<a href="/skills/<%= skill._id %> "><%= skill.text %></a> 
 				- 
